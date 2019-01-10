@@ -108,17 +108,19 @@
 
 
 
-  <meta name="description" content="启动方式在启动 Spring Boot jar 时添加参数：12# 5005 端口可更改成任意其它端口$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -jar &amp;lt;you_jar_name&amp;gt;.jar">
+  <meta name="description" content="启动方式在启动 Spring Boot jar 时添加参数：12# 5005 端口可更改成任意其它端口$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -jar &amp;lt;you_jar_name&amp;gt;.jar 在 Intellij IDEA 中远程调试 注意：本地代码和远程代码(打包时代码)必">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Boot 应用启用远程调试">
 <meta property="og:url" content="http://yoursite.com/2019/01/10/springboot-enable-remote-debug/index.html">
 <meta property="og:site_name" content="Geek Note">
-<meta property="og:description" content="启动方式在启动 Spring Boot jar 时添加参数：12# 5005 端口可更改成任意其它端口$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -jar &amp;lt;you_jar_name&amp;gt;.jar">
+<meta property="og:description" content="启动方式在启动 Spring Boot jar 时添加参数：12# 5005 端口可更改成任意其它端口$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -jar &amp;lt;you_jar_name&amp;gt;.jar 在 Intellij IDEA 中远程调试 注意：本地代码和远程代码(打包时代码)必">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-10T03:08:53.520Z">
+<meta property="og:image" content="https://i.postimg.cc/LsqCrykN/Intelli-J-remote-debug.png">
+<meta property="og:updated_time" content="2019-01-10T03:18:31.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot 应用启用远程调试">
-<meta name="twitter:description" content="启动方式在启动 Spring Boot jar 时添加参数：12# 5005 端口可更改成任意其它端口$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -jar &amp;lt;you_jar_name&amp;gt;.jar">
+<meta name="twitter:description" content="启动方式在启动 Spring Boot jar 时添加参数：12# 5005 端口可更改成任意其它端口$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,suspend=n -jar &amp;lt;you_jar_name&amp;gt;.jar 在 Intellij IDEA 中远程调试 注意：本地代码和远程代码(打包时代码)必">
+<meta name="twitter:image" content="https://i.postimg.cc/LsqCrykN/Intelli-J-remote-debug.png">
 
 
 
@@ -326,7 +328,7 @@
                 
               
 
-              <time title="创建时间：2019-01-10 11:02:45 / 修改时间：11:08:53" itemprop="dateCreated datePublished" datetime="2019-01-10T11:02:45+08:00">2019-01-10</time>
+              <time title="创建时间：2019-01-10 11:02:45 / 修改时间：11:18:31" itemprop="dateCreated datePublished" datetime="2019-01-10T11:02:45+08:00">2019-01-10</time>
             
 
             
@@ -365,6 +367,11 @@
 
       
         <h1 id="启动方式"><a href="#启动方式" class="headerlink" title="启动方式"></a>启动方式</h1><p>在启动 Spring Boot jar 时添加参数：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 5005 端口可更改成任意其它端口</span></span><br><span class="line">$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=5005,<span class="built_in">suspend</span>=n -jar &lt;you_jar_name&gt;.jar</span><br></pre></td></tr></table></figure></p>
+<h1 id="在-Intellij-IDEA-中远程调试"><a href="#在-Intellij-IDEA-中远程调试" class="headerlink" title="在 Intellij IDEA 中远程调试"></a>在 Intellij IDEA 中远程调试</h1><blockquote>
+<p>注意：本地代码和远程代码(打包时代码)必须一致</p>
+</blockquote>
+<p><a href="https://postimg.cc/WDvwZwHk" target="_blank" rel="noopener"><img src="https://i.postimg.cc/LsqCrykN/Intelli-J-remote-debug.png" alt="Intelli-J-remote-debug.png"></a></p>
+<p><code>Configurations</code> 中添加 Remote，设置 远程 ip 和启用的 debug 端口。Debug Console 出现以下信息即表示连接成功。<br>然后就愉快地打断点调试吧～<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connected to the target VM, address: &apos;10.229.255.52:5005&apos;, transport: &apos;socket&apos;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -537,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#启动方式"><span class="nav-number">1.</span> <span class="nav-text">启动方式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#启动方式"><span class="nav-number">1.</span> <span class="nav-text">启动方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在-Intellij-IDEA-中远程调试"><span class="nav-number">2.</span> <span class="nav-text">在 Intellij IDEA 中远程调试</span></a></li></ol></div>
             
 
           </div>
